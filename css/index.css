@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ...browser resets... */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+    scroll-behavior: smooth;
+}
+
+/* ...styling heading-1 of class container-1 */
+#heading-1{
+    position: absolute;
+    width: 397px;
+    height: 53px;
+    left: 125px;
+    top: 1115px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    color: #607C8C
+}
+
+/* ...styling par-1 of class container-1 */
+#par-1{
+    position: absolute;
+    width: 501px;
+    height: 156px;
+    left: 124px;
+    top: 1178px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: justify;
+    color: #525252;
+}
+
+/* ...styling image-1... */
+#image-1 {
+    position: absolute;
+    width: 321px;
+    height: 273px;
+    left: 720px;
+    top: 1115px;
+    border-radius: 20px;
+}
+
+/* ...styling image-2... */
+#image-2 {
+    position: absolute;
+    width: 321px;
+    height: 220px;
+    left: 720px;
+    top: 1404px;
+    border-radius: 20px;
+}
+
+/* ...styling image-3... */
+#image-3 {
+    position: absolute;
+    width: 289px;
+    height: 509px;
+    left: 1056px;
+    top: 1115px;
+    border-radius: 20px; 
+}
+
+/* ...styling heading-2  */
+#heading-2{
+    position: absolute;
+    width: 472px;
+    height: 53px;
+    left: 125px;
+    top: 1402px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    color: #607C8C
+}
+
+/* ...styling paragraph 2 of class container-1... */
+#par-2{
+    position: absolute;
+    width: 501px;
+    height: 156px;
+    left: 124px;
+    top: 1465px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: justify;
+    color: #525252;
+}
+
+/* ...styling heading-3... */
+#heading-3{
+    position: absolute;
+    width: 794px;
+    height: 108px;
+    left: 323px;
+    top: 2576px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: #607C8C
+}
+
+/* ...styling heading-4 of class row... */
+#heading-4{
+    position: absolute;
+    width: 344px;
+    height: 53px;
+    left: 124px;
+    top: 2708px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #607C8C
+}
+
+/* ...styling par-3 of class row... */
+#par-3{
+    position: absolute;
+    width: 345px;
+    height: 120px;
+    left: 125px;
+    top: 2779px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #525252;
+}
+
+/* ...styling heading-5 of class row... */
+#heading-5{
+    position: absolute;
+    width: 344px;
+    height: 53px;
+    left: 576px;
+    top: 2702px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #607C8C
+}
+
+/* ...styling par-4 of class row... */
+#par-4{
+    position: absolute;
+    width: 345px;
+    height: 120px;
+    left: 547px;
+    top: 2780px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #525252;
+}
+
+/* ...styling heading-6 of class row... */
+#heading-6{
+    position: absolute;
+    width: 344px;
+    height: 53.27px;
+    left: 970px;
+    top: 2706px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #607C8C
+}
+
+/* ...styling par-5 of class row... */
+#par-5{
+    position: absolute;
+    width: 345px;
+    height: 120.62px;
+    left: 969px;
+    top: 2779.38px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #525252;
+}
+
+/* ...styling icon1... */
+#icon1{
+    position: absolute;
+    left: -1.25px;
+    right: 2.56%;
+    width: 49.97px;
+    height: 50px;
+    top: 5.91px;
+    bottom: 0%;
+    background: #607C8C;
+}
+
+/* ...styling icon1... */
+#icon2{
+    position: absolute;
+    left: 7.03%;
+    right: 20.51%;
+    width: 36.23px;
+    height: 38.18px;
+    top: 5.91px;
+    bottom: 11.82%;
+    background: #607C8C;
+}
+
+/* ...styling icon2... */
+#icon3{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    width: 50px;
+    height: 40px;
+    top: 5.91px;
+    bottom: 0%;
+    background: #607C8C;
+}
