@@ -29,15 +29,15 @@
                     <button>Get Started</button>
                 </div>
                 <div class="login">
-                    <form action="" id="login-form">
-                        <label for="name">
+                    <form action="#" id="login-form">
+                        <label for="username">
                             <span>Username</span>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="username" id="username">
                             
                         </label>
                         <label for="passwdrd">
                             <span>Password</span>
-                            <input type="password" name="passwdrd" id="passwdrd">
+                            <input type="password" name="password" id="password">
                             
                         </label>
                         <div class="button-container">
@@ -80,6 +80,120 @@
             <h3>Don't be late.<br>Request a ride now!</h3>
             <button>Get Ride</button>
             <img src="images/smart.png" alt="">
+        </section>
+
+        <!-- request modal -->
+        <section id="request-modal">
+            <div class="user-selection">
+                <h3>Welcome back, <span class="username">Samuel.</span></h3>
+                <form action="" class="trip-selection" id="trip-selection">
+                    <div class="choices">
+                        <div class="route">
+                            <h3>Select Destination</h3>
+                            <select id="route" name="route">
+                                <option value="route" selected>Select Destination</option>
+                                <option value="Kiambu 50">Kiambu</option>
+                                <option value="Cabanas 60">Cabanas</option>
+                                <option value="Syokimau 60">Syokimau</option>
+                                <option value="Kitengela 100">Kitengela</option>
+                                <option value="Langata 80">Langata</option>
+                                <option value="Donholm 80">Donholm</option>
+                                <option value="Westlands 40">Westlands</option>
+                                <option value="Dagoretti 70">Dagoretti</option>
+                                <option value="Ruaka 60">Ruaka</option>
+                                <option value="Ruai 100">Ruai</option>
+                            </select>
+                        </div>
+                        <div class="commute">
+                            <h3>Type of commute</h3>
+                            <label for="instant">
+                                <input type="radio" name="commute" id="instant" value="instant">
+                                <span>Instant ride</span>
+                            </label>
+                            <label for="later">
+                                <input type="radio" name="commute" id="later" value="later">
+                                <span>Book for later</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="disability">
+                        <label for="has-disability">
+                            <input type="checkbox" name="disablity" id="has-disability" value="yes">
+                            <span>Check this box if you have any physical disabilities</span>
+                        </label>
+                    </div>
+                    <input type="submit" value="Select Driver">
+                </form>
+
+                <div class="driver-confirmation">
+                    <div class="disability-true">
+                        <div class="d1">
+                            <img src="images/drivers/Emery.webp" alt="">
+                            <div>
+                                <h3>Joshua Kennedy</h3>
+                                <p>Contact: +254023456878</p>
+                                <p>Rating: <span>4.5</span></p>
+                                <p>Estimated time of arrival: 7mins</p>
+                                <p>Number Plate: SD123</p>
+                                <button class="button-joshua driver">Select</button>
+                            </div>
+                            
+                        </div>
+                        <div class="d2">
+                            <img src="images/drivers/Gideon.webp" alt="">
+                            <div>
+                                <h3>Timothy Williams</h3>
+                                <p>Contact: +254023856878</p>
+                                <p>Rating: <span>4.5</span></p>
+                                <p>Estimated time of arrival: 5mins</p>
+                                <p>Number Plate: SD456</p>
+                                <button class="button-timothy driver">Select</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="disability-false">
+                        <div class="d1">
+                            <img src="images/drivers/John.webp" alt="">
+                            <div>
+                                <h3>John Mathews</h3>
+                                <p>Contact: +254023463978</p>
+                                <p>Rating: <span>4</span></p>
+                                <p>Estimated time of arrival: 3mins</p>
+                                <p>Number Plate: SD789</p>
+                                <button class="button-john driver">Select</button>
+                            </div>
+                            
+                        </div>
+                        <div class="d2">
+                            <img src="images/drivers/Kev.webp" alt="">
+                            <div>
+                                <h3>Dean Davidson</h3>
+                                <p>Contact: +254723398978</p>
+                                <p>Rating: <span>4.5</span></p>
+                                <p>Estimated time of arrival: 7mins</p>
+                                <p>Number Plate: SD123</p>
+                                <button class="button-dean driver">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ride-summary">
+                <h3>Here is your Ride Summary</h3>
+                <p>Destination: <span class="user-destination"></span></p>
+                <p>Bus Fare: <span class="bus-fare"></span></p>
+                <p class="info">This will be charged to your SmartDrive account.</p>
+                <div class="driver-details">
+                    <h3>Driver Details </h3>
+                    <p>Name: <span class="driver-name"></span></p>
+                    <p>Contact: <span class="driver-contact"></span></p>
+                    <p>ETA: <span class="driver-eta"></span></p>
+                    <p>Rating: <span class="driver-rating"></span></p>
+                </div>
+                <button class="user-agreement">Ok</button>
+            </div>
         </section>
 
         <!-- what we guarantee section -->
