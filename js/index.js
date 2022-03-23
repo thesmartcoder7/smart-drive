@@ -10,38 +10,33 @@ let samuel = {
     password: "samuel"
 }
 
-/* - - - sample driver objects - - - */
-let noDisabilityD = [
-    {
-        name: "joshua kennedy",
-        rating: "4",
-        eta: 7,
-        inspection: true,
-        vehiclePlates: "SD123"
-    },
-    {
-        name: "timothy william",
-        rating: "3",
-        eta: 5,
-        inspection: true,
-        vehiclePlates: "SD456"
-    }
-]
+/* - - - form variables - - - */
+let userForm = document.querySelector("#trip-selection")
+let userDestination = document.querySelector("#route")
+let userPysical = document.querySelector("#has-disability")
+let driverSelection = document.querySelector(".driver-confirmation")
+let normalDriverSelection = document.querySelector(".disability-false")
+let disabilityDriverSelection = document.querySelector(".disability-true")
 
+driverSelection.addEventListener("click", (e)=>{
+    console.log(e)
+})
 
-let disabilityD = [
-    {
-        name: "mathew amenya",
-        rating: "4",
-        eta: 7,
-        inspection: true,
-        vehiclePlates: "SD789"
-    },
-    {
-        name: "daniel makatu",
-        rating: "3",
-        eta: 5,
-        inspection: true,
-        vehiclePlates: "SD876"
+userForm.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    let userTrip = userForm.commute.value
+    console.log(
+        userDestination.value,
+        userTrip,
+        userPysical.checked
+    )
+
+    driverSelection.style.display = "flex"
+    if (userPysical.checked){
+        disabilityDriverSelection.style.display = "flex"
+        normalDriverSelection.style.display = "none"
+    } else {
+        normalDriverSelection.style.display = "flex"
+        disabilityDriverSelection.style.display = "none"
     }
-]
+})
