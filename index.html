@@ -29,8 +29,8 @@
                     <button>Get Started</button>
                 </div>
                 <div class="login">
-                    <form action="" id="login-form">
-                        <label for="name">
+                    <form action="#" id="login-form">
+                        <label for="username">
                             <span>Username</span>
                             <input type="text" name="username" id="username">
                             
@@ -89,16 +89,16 @@
                             <h3>Select Destination</h3>
                             <select id="route" name="route">
                                 <option value="route" selected>Select Destination</option>
-                                <option value="50">Imara Daima</option>
-                                <option value="60">Cabanas</option>
-                                <option value="60">Syokimau</option>
-                                <option value="100">Kitengela</option>
-                                <option value="80">Lagnata</option>
-                                <option value="80">Doholm</option>
-                                <option value="40">Westlands</option>
-                                <option value="70">Dagoretti</option>
-                                <option value="60">Ruaka</option>
-                                <option value="100">Ruai</option>
+                                <option value="Kiambu 50">Kiambu</option>
+                                <option value="Cabanas 60">Cabanas</option>
+                                <option value="Syokimau 60">Syokimau</option>
+                                <option value="Kitengela 100">Kitengela</option>
+                                <option value="Langata 80">Langata</option>
+                                <option value="Donholm 80">Donholm</option>
+                                <option value="Westlands 40">Westlands</option>
+                                <option value="Dagoretti 70">Dagoretti</option>
+                                <option value="Ruaka 60">Ruaka</option>
+                                <option value="Ruai 100">Ruai</option>
                             </select>
                         </div>
                         <div class="commute">
@@ -158,7 +158,7 @@
                                 <p>Rating: <span>4</span></p>
                                 <p>Estimated time of arrival: 3mins</p>
                                 <p>Number Plate: SD789</p>
-                                <button class="button-jogn driver">Select</button>
+                                <button class="button-john driver">Select</button>
                             </div>
                             
                         </div>
@@ -176,7 +176,21 @@
                     </div>
                 </div>
             </div>
-            
+
+            <div class="ride-summary">
+                <h3>Here is your Ride Summary</h3>
+                <p>Destination: <span class="user-destination"></span></p>
+                <p>Bus Fare: <span class="bus-fare"></span></p>
+                <p class="info">This will be charged to your SmartDrive account.</p>
+                <div class="driver-details">
+                    <h3>Driver Details </h3>
+                    <p>Name: <span class="driver-name"></span></p>
+                    <p>Contact: <span class="driver-contact"></span></p>
+                    <p>ETA: <span class="driver-eta"></span></p>
+                    <p>Rating: <span class="driver-rating"></span></p>
+                </div>
+                <button class="user-agreement">Ok</button>
+            </div>
         </section>
 
         <!-- what we guarantee section -->

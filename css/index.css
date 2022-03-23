@@ -173,6 +173,7 @@ header nav ul li a {
     padding: 4% 10%;
     border-radius: 0.4vw;
     margin-top: 10%;
+    cursor: pointer;
 }
 
 #hero .hero-content .login form p {
@@ -299,14 +300,13 @@ header nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* max-height: 80vh; */
     background-color: #fff;
     box-shadow: 0 0 3vw rgba(0,0,0,0.4);
     animation: appear 1s;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    /* display: none; */
+    display: none;
 }
 
 #request-modal .user-selection {
@@ -314,6 +314,7 @@ header nav ul li a {
     border-radius: 1vw;
     width: 100%;
     padding: 5% 5% 10% 5%;
+    /* display: none; */
 }
 
 #request-modal .user-selection h3 {
@@ -490,6 +491,42 @@ header nav ul li a {
     cursor: pointer;
 }
 
+
+#request-modal .ride-summary {
+    border: 0.2vw solid #607c8c;
+    border-radius: 1vw;
+    width: 100%;
+    padding: 5% 5% 10% 5%;
+    display: none;
+}
+
+#request-modal .ride-summary h3 {
+    font-size:1.5vw;
+    color: #607c8c;
+}
+
+#request-modal .ride-summary p {
+    margin-top: 2%;
+    font-size: 1vw;
+}
+
+
+#request-modal .ride-summary .driver-details h3 {
+    font-size: 1vw;
+    margin-top: 5%;
+}
+
+#request-modal .ride-summary button {
+    background-color: #607c8c;
+    padding: 1.5% 6%;
+    outline: none;
+    border: none;
+    border-radius: 0.2vw;
+    color: #fff;
+    font-size: 0.7vw;
+    margin-top: 5%;
+    cursor: pointer;
+}
 
 
 
