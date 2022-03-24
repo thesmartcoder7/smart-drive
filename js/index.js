@@ -6,9 +6,12 @@ footerYear.textContent = currentYear;
 
 /* - - - sample user object - - - */
 let samuel = {
+	name: "samuel martins",
 	username: "samuel",
 	password: "samuel",
 };
+
+let userDisplayName = document.querySelector(".username");
 
 /* - - - form variables - - - */
 let userForm = document.querySelector("#trip-selection");
@@ -27,6 +30,7 @@ let driverName = document.querySelector(".driver-name");
 let driverContact = document.querySelector(".driver-contact");
 let driverEta = document.querySelector(".driver-eta");
 let driverRating = document.querySelector(".driver-rating");
+let driverPlate = document.querySelector(".driver-plate");
 
 let userAgreement = document.querySelector(".user-agreement");
 let thankYou = document.querySelector("#thank-you");
@@ -53,21 +57,25 @@ for (i = 0; i < drivers.length; i++) {
 			driverContact.textContent = "+254023456878";
 			driverEta.textContent = "7 minutes";
 			driverRating.textContent = "4.5";
+			driverPlate.textContent = "SD123";
 		} else if (e.target.classList.contains("button-timothy")) {
 			driverName.textContent = "Timothy Williams";
 			driverContact.textContent = "+254023856878";
 			driverEta.textContent = "5 minutes";
 			driverRating.textContent = "4.5";
+			driverPlate.textContent = "SD456";
 		} else if (e.target.classList.contains("button-john")) {
 			driverName.textContent = "John Mathews";
 			driverContact.textContent = "+254023463978";
 			driverEta.textContent = "3 minutes";
 			driverRating.textContent = "4";
+			driverPlate.textContent = "SD789";
 		} else {
 			driverName.textContent = "Dean Davidson";
 			driverContact.textContent = "+254723398978";
 			driverEta.textContent = "7 minutes";
 			driverRating.textContent = "4.5";
+			driverPlate.textContent = "SD876";
 		}
 		requestSeletion.style.display = "none";
 		rideSummary.style.display = "block";
@@ -97,6 +105,9 @@ loginForm.addEventListener("submit", (e) => {
 		loginForm.password.value === samuel.password
 	) {
 		rideRequest.style.display = "flex";
+		let displayName = samuel.name.split(" ")[0];
+		userDisplayName.textContent =
+			displayName.charAt(0).toUpperCase() + displayName.slice(1);
 	}
 
 	loginForm.reset();

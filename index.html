@@ -5,6 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/index.css" />
+		<link
+			rel="shortcut icon"
+			href="images/riding-car.png"
+			type="image/x-icon"
+		/>
 		<title>Home</title>
 	</head>
 
@@ -55,18 +60,22 @@
 							</p>
 						</form>
 
-						<form action="#" id="signup-form">
+						<form action="" id="signup-form" method="post">
 							<label for="signup-name">
 								<span>Name</span>
 								<input type="text" name="signup-name" id="signup-name" />
 							</label>
 							<label for="signup-email">
-								<span>Password</span>
+								<span>Email</span>
 								<input type="email" name="signup-email" id="signup-email" />
 							</label>
-							<label for="password">
+							<label for="signup-password">
 								<span>Password</span>
-								<input type="password" name="password" id="password" />
+								<input
+									type="password"
+									name="signup-password"
+									id="signup-password"
+								/>
 							</label>
 							<div class="button-container">
 								<input type="submit" value="Create Account" />
@@ -123,7 +132,7 @@
 			<!-- request modal -->
 			<section id="request-modal">
 				<div class="user-selection">
-					<h3>Welcome back, <span class="username">Samuel.</span></h3>
+					<h3>Welcome back, <span class="username">Samuel</span>.</h3>
 					<form action="" class="trip-selection" id="trip-selection">
 						<div class="choices">
 							<div class="route">
@@ -218,7 +227,7 @@
 									<p>Contact: +254723398978</p>
 									<p>Rating: <span>4.5</span></p>
 									<p>Estimated time of arrival: 7mins</p>
-									<p>Number Plate: SD123</p>
+									<p>Number Plate: SD876</p>
 									<button class="button-dean driver">Select</button>
 								</div>
 							</div>
@@ -228,12 +237,13 @@
 				<div class="ride-summary">
 					<h3>Here is your Ride Summary</h3>
 					<p>Destination: <span class="user-destination"></span></p>
-					<p>Bus Fare: <span class="bus-fare"></span></p>
+					<p>Bus Fare: Ksh <span class="bus-fare"></span></p>
 					<p class="info">This will be charged to your SmartDrive account.</p>
 					<div class="driver-details">
 						<h3>Driver Details</h3>
 						<p>Name: <span class="driver-name"></span></p>
 						<p>Contact: <span class="driver-contact"></span></p>
+						<p>Vehicle Plate: <span class="driver-plate"></span></p>
 						<p>ETA: <span class="driver-eta"></span></p>
 						<p>Rating: <span class="driver-rating"></span></p>
 					</div>
