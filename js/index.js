@@ -74,7 +74,22 @@ for (i = 0; i < drivers.length; i++) {
 	});
 }
 
+/* - - - user form sign-up login variables - - - */
+let signUpLink = document.querySelector(".signup-link");
+let signUpForm = document.querySelector("#signup-form");
+let loginLink = document.querySelector(".login-link");
 let loginForm = document.querySelector("#login-form");
+
+signUpLink.addEventListener("click", () => {
+	signUpForm.style.display = "flex";
+	loginForm.style.display = "none";
+});
+
+loginLink.addEventListener("click", () => {
+	loginForm.style.display = "flex";
+	signUpForm.style.display = "none";
+});
+
 loginForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (

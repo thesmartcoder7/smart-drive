@@ -14,13 +14,15 @@
 			<section id="hero">
 				<header>
 					<div class="logo">
-						<h1>Smart<span>Drive</span></h1>
+						<a href="#">
+							<h1>Smart<span>Drive</span></h1>
+						</a>
 					</div>
 					<nav>
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#contact">Contact Us</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -30,7 +32,9 @@
 							SmartDrive. <br />
 							Commute in style.
 						</h2>
-						<button>Get Started</button>
+						<a href="#about">
+							<button>Get Started</button>
+						</a>
 					</div>
 					<div class="login">
 						<form action="#" id="login-form">
@@ -38,14 +42,38 @@
 								<span>Username</span>
 								<input type="text" name="username" id="username" />
 							</label>
-							<label for="passwdrd">
+							<label for="password">
 								<span>Password</span>
 								<input type="password" name="password" id="password" />
 							</label>
 							<div class="button-container">
 								<input type="submit" value="Login" />
 							</div>
-							<p>Don't have an account yet? <span>Sign Up</span></p>
+							<p>
+								Don't have an account yet?
+								<span class="signup-link">Sign Up</span>
+							</p>
+						</form>
+
+						<form action="#" id="signup-form">
+							<label for="signup-name">
+								<span>Name</span>
+								<input type="text" name="signup-name" id="signup-name" />
+							</label>
+							<label for="signup-email">
+								<span>Password</span>
+								<input type="email" name="signup-email" id="signup-email" />
+							</label>
+							<label for="password">
+								<span>Password</span>
+								<input type="password" name="password" id="password" />
+							</label>
+							<div class="button-container">
+								<input type="submit" value="Create Account" />
+							</div>
+							<p>
+								Already have an account? <span class="login-link">Login</span>
+							</p>
 						</form>
 					</div>
 				</div>
@@ -86,7 +114,9 @@
 			<!-- request ride section -->
 			<section id="request">
 				<h3>Don't be late.<br />Request a ride now!</h3>
-				<button>Get Ride</button>
+				<a href="#">
+					<button>Get Ride</button>
+				</a>
 				<img src="images/smart.png" alt="" />
 			</section>
 
