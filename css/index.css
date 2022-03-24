@@ -244,6 +244,20 @@ header nav ul li a {
 	margin-top: 10%;
 }
 
+#hero .hero-content .login form p.error-message {
+	color: #fff;
+	font-size: 0.75vw;
+	margin-top: 10%;
+	display: none;
+}
+
+#hero .hero-content .login form p.validation-text {
+	color: #fff;
+	font-size: 0.75vw;
+	margin-top: 10%;
+	display: none;
+}
+
 #hero .hero-content .login form p span {
 	color: #fff;
 	text-decoration: underline;

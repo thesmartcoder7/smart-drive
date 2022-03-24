@@ -25,7 +25,6 @@ let rideRequest = document.querySelector("#request-modal");
 
 let requestSeletion = document.querySelector(".user-selection");
 let rideSummary = document.querySelector(".ride-summary");
-
 let drivers = document.querySelectorAll(".driver");
 let driverName = document.querySelector(".driver-name");
 let driverContact = document.querySelector(".driver-contact");
@@ -39,6 +38,9 @@ let thankYouBtn = document.querySelector(".thank-button");
 let blurBackgroud = document.querySelector("#blur");
 let loginDiv = document.querySelector(".login");
 let userBalance = document.querySelector(".user-balance");
+let errorMessage = document.querySelector(".error-message");
+let validationText = document.querySelector(".validation-text");
+let newUser = {};
 
 userAgreement.addEventListener("click", () => {
 	rideSummary.style.display = "none";
@@ -106,25 +108,59 @@ loginLink.addEventListener("click", () => {
 
 loginForm.addEventListener("submit", (e) => {
 	e.preventDefault();
-	if (
-		loginForm.username.value === samuel.username &&
-		loginForm.password.value === samuel.password
-	) {
-		loginDiv.style.display = "none";
-		blurBackgroud.style.display = "block";
-		rideRequest.style.display = "flex";
-		let displayName = samuel.name.split(" ")[0];
-		userDisplayName.textContent =
-			displayName.charAt(0).toUpperCase() + displayName.slice(1);
-		userBalance.textContent = samuel.balance;
+	if (loginForm.username.value !== "" && loginForm.password.value !== "") {
+		if (
+			loginForm.username.value === samuel.username &&
+			loginForm.password.value === samuel.password
+		) {
+			loginDiv.style.display = "none";
+			blurBackgroud.style.display = "block";
+			rideRequest.style.display = "flex";
+			let displayName = samuel.name.split(" ")[0];
+			userDisplayName.textContent =
+				displayName.charAt(0).toUpperCase() + displayName.slice(1);
+			userBalance.textContent = samuel.balance;
+		} else if (
+			loginForm.username.value === newUser.username &&
+			loginForm.password.value === newUser.password
+		) {
+			loginDiv.style.display = "none";
+			blurBackgroud.style.display = "block";
+			rideRequest.style.display = "flex";
+			let displayName = newUser.name.split(" ")[0];
+			userDisplayName.textContent =
+				displayName.charAt(0).toUpperCase() + displayName.slice(1);
+			userBalance.textContent = newUser.balance;
+		} else {
+			errorMessage.style.display = "block";
+			validationText.style.display = "none";
+			loginForm.classList.add("shake");
+			setTimeout(() => {
+				loginForm.classList.remove("shake");
+			}, 1000);
+		}
 	} else {
 		loginForm.classList.add("shake");
 		setTimeout(() => {
 			loginForm.classList.remove("shake");
 		}, 1000);
+		errorMessage.style.display = "none";
+		validationText.style.display = "block";
 	}
 
 	loginForm.reset();
+});
+
+/* - - - signup form event- - - */
+signUpForm.addEventListener("submit", (e) => {
+	e.preventDefault();
+	newUser.name = signUpForm.signupname.value;
+	newUser.username = signUpForm.signupname.value;
+	newUser.password = signUpForm.signuppassword.value;
+	newUser.balance = 500;
+
+	signUpForm.style.display = "none";
+	loginForm.style.display = "flex";
 });
 
 userForm.addEventListener("submit", (e) => {
