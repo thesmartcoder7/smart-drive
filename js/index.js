@@ -29,11 +29,18 @@ let driverEta = document.querySelector(".driver-eta")
 let driverRating = document.querySelector(".driver-rating")
 
 let userAgreement = document.querySelector(".user-agreement")
+let thankYou = document.querySelector("#thank-you")
+let thankYouBtn = document.querySelector(".thank-button")
 
 userAgreement.addEventListener("click", ()=>{
     rideSummary.style.display = "none"
     rideRequest.style.display = "none"
     requestSeletion.style.display = "none"
+    thankYou.style.display = "flex"
+})
+
+thankYouBtn.addEventListener("click", ()=>{
+    thankYou.style.display = "none"
 })
 
 let busFare = document.querySelector(".bus-fare")
