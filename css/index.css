@@ -512,7 +512,7 @@ header nav ul li a {
 
 
 #request-modal .ride-summary .driver-details h3 {
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin-top: 5%;
 }
 
@@ -528,7 +528,45 @@ header nav ul li a {
     cursor: pointer;
 }
 
+/* - - - guarantee section - - - */
+#thank-you {
+    border-radius: 1.5vw;
+    padding: 3%;
+    width: 40%;
+    height: 20%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 3vw rgba(0,0,0,0.4);
+    animation: appear 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
 
+#thank-you h3 {
+    font-size: 1.5vw;
+}
+
+#thank-you h3 span {
+    color: #607c8c;
+}
+
+#thank-you button {
+    background-color: #607c8c;
+    padding: 1.5% 6%;
+    outline: none;
+    border: none;
+    border-radius: 0.2vw;
+    color: #fff;
+    font-size: 0.7vw;
+    margin-top: 5%;
+    cursor: pointer;
+}
 
 
 /* - - - guarantee section - - - */
