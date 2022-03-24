@@ -9,6 +9,7 @@ let samuel = {
 	name: "samuel martins",
 	username: "samuel",
 	password: "samuel",
+	balance: 440,
 };
 
 let userDisplayName = document.querySelector(".username");
@@ -35,6 +36,9 @@ let driverPlate = document.querySelector(".driver-plate");
 let userAgreement = document.querySelector(".user-agreement");
 let thankYou = document.querySelector("#thank-you");
 let thankYouBtn = document.querySelector(".thank-button");
+let blurBackgroud = document.querySelector("#blur");
+let loginDiv = document.querySelector(".login");
+let userBalance = document.querySelector(".user-balance");
 
 userAgreement.addEventListener("click", () => {
 	rideSummary.style.display = "none";
@@ -45,6 +49,8 @@ userAgreement.addEventListener("click", () => {
 
 thankYouBtn.addEventListener("click", () => {
 	thankYou.style.display = "none";
+	blurBackgroud.style.display = "none";
+	loginDiv.style.display = "flex";
 });
 
 let busFare = document.querySelector(".bus-fare");
@@ -104,10 +110,18 @@ loginForm.addEventListener("submit", (e) => {
 		loginForm.username.value === samuel.username &&
 		loginForm.password.value === samuel.password
 	) {
+		loginDiv.style.display = "none";
+		blurBackgroud.style.display = "block";
 		rideRequest.style.display = "flex";
 		let displayName = samuel.name.split(" ")[0];
 		userDisplayName.textContent =
 			displayName.charAt(0).toUpperCase() + displayName.slice(1);
+		userBalance.textContent = samuel.balance;
+	} else {
+		loginForm.classList.add("shake");
+		setTimeout(() => {
+			loginForm.classList.remove("shake");
+		}, 1000);
 	}
 
 	loginForm.reset();

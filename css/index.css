@@ -15,6 +15,20 @@ main {
 	position: relative;
 }
 
+#blur {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(255, 255, 255, 0.12),
+		rgba(255, 255, 255, 0.2)
+	);
+	backdrop-filter: blur(2vw);
+	z-index: 3;
+	display: none;
+}
+
 @keyframes appear {
 	0% {
 		opacity: 0;
@@ -22,6 +36,28 @@ main {
 	100% {
 		opacity: 1;
 	}
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(1deg);
+	}
+	25% {
+		transform: rotate(-1deg);
+	}
+	50% {
+		transform: rotate(1deg);
+	}
+	75% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.shake {
+	animation: shake 0.5s;
 }
 
 /* - - - hero section styling - - - */
@@ -137,7 +173,7 @@ header nav ul li a {
 	align-items: flex-end;
 	justify-content: center;
 	border-radius: 0.7vw;
-	padding: 15% 10%;
+	padding: 10%;
 	background-image: linear-gradient(
 		to bottom right,
 		rgba(255, 255, 255, 0.12),
@@ -145,7 +181,7 @@ header nav ul li a {
 	);
 	border: 0.1vw solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(0.5vw);
-	animation: appear 0.5s;
+	/* animation: appear 0.5s; */
 }
 
 #hero .hero-content .login #signup-form {
@@ -330,6 +366,7 @@ header nav ul li a {
 	align-items: flex-start;
 	justify-content: flex-start;
 	display: none;
+	z-index: 3;
 }
 
 #request-modal .user-selection {
@@ -344,6 +381,10 @@ header nav ul li a {
 	background-color: #fff;
 	font-size: 2vw;
 	color: #607c8c;
+}
+
+#request-modal .user-selection p.user-balance-p {
+	font-size: 1vw;
 }
 
 #request-modal .user-selection form {
@@ -575,6 +616,7 @@ header nav ul li a {
 	align-items: center;
 	justify-content: center;
 	display: none;
+	z-index: 3;
 }
 
 #thank-you h3 {
