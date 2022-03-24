@@ -40,6 +40,7 @@ let loginDiv = document.querySelector(".login");
 let userBalance = document.querySelector(".user-balance");
 let errorMessage = document.querySelector(".error-message");
 let validationText = document.querySelector(".validation-text");
+let sValidationText = document.querySelector(".signup-validation-text");
 let newUser = {};
 
 userAgreement.addEventListener("click", () => {
@@ -154,18 +155,25 @@ loginForm.addEventListener("submit", (e) => {
 /* - - - signup form event- - - */
 signUpForm.addEventListener("submit", (e) => {
 	e.preventDefault();
-	newUser.name = signUpForm.signupname.value;
-	newUser.username = signUpForm.signupname.value;
-	newUser.password = signUpForm.signuppassword.value;
-	newUser.balance = 500;
+	if (
+		signUpForm.signupname.value !== "" &&
+		signUpForm.signupname.value !== "" &&
+		signUpForm.signuppassword.value !== ""
+	) {
+		newUser.name = signUpForm.signupname.value;
+		newUser.username = signUpForm.signupname.value;
+		newUser.password = signUpForm.signuppassword.value;
+		newUser.balance = 500;
 
-	signUpForm.style.display = "none";
-	loginForm.style.display = "flex";
+		signUpForm.style.display = "none";
+		loginForm.style.display = "flex";
+	} else {
+		sValidationText.style.display = "block";
+	}
 });
 
 userForm.addEventListener("submit", (e) => {
 	e.preventDefault();
-	// let userTrip = userForm.commute.value
 	destination.textContent = userDestination.value.split(" ")[0];
 	busFare.textContent = userDestination.value.split(" ")[1];
 

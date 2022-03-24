@@ -258,6 +258,13 @@ header nav ul li a {
 	display: none;
 }
 
+#hero .hero-content .login form p.signup-validation-text {
+	color: #fff;
+	font-size: 0.75vw;
+	margin-top: 10%;
+	display: none;
+}
+
 #hero .hero-content .login form p span {
 	color: #fff;
 	text-decoration: underline;
