@@ -212,8 +212,6 @@ userForm.addEventListener("submit", (e) => {
 	busFare.textContent = userDestination.value.split(" ")[1];
 	pickUpTime = userForm.time.value;
 
-	console.log(userDestination.value, userForm.commute.value);
-
 	if (pickUpTime !== "") {
 		pickUpText.style.display = "block";
 		userTime.textContent = pickUpTime;
