@@ -100,11 +100,17 @@ let loginForm = document.querySelector("#login-form");
 signUpLink.addEventListener("click", () => {
 	signUpForm.style.display = "flex";
 	loginForm.style.display = "none";
+	errorMessage.style.display = "none";
+	validationText.style.display = "none";
+	sValidationText.style.display = "none";
 });
 
 loginLink.addEventListener("click", () => {
 	loginForm.style.display = "flex";
 	signUpForm.style.display = "none";
+	errorMessage.style.display = "none";
+	validationText.style.display = "none";
+	sValidationText.style.display = "none";
 });
 
 loginForm.addEventListener("submit", (e) => {
@@ -168,6 +174,10 @@ signUpForm.addEventListener("submit", (e) => {
 		signUpForm.style.display = "none";
 		loginForm.style.display = "flex";
 	} else {
+		signUpForm.classList.add("shake");
+		setTimeout(() => {
+			signUpForm.classList.remove("shake");
+		}, 1000);
 		sValidationText.style.display = "block";
 	}
 });
