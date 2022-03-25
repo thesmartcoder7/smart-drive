@@ -54,10 +54,13 @@ thankYouBtn.addEventListener("click", () => {
 	thankYou.style.display = "none";
 	blurBackgroud.style.display = "none";
 	loginDiv.style.display = "flex";
+	window.location.reload();
 });
 
 let busFare = document.querySelector(".bus-fare");
 let destination = document.querySelector(".user-destination");
+let pickUpTime = document.querySelector(".user-time");
+let pickUpText = document.querySelector(".user-pickup");
 
 for (i = 0; i < drivers.length; i++) {
 	drivers[i].addEventListener("click", (e) => {
@@ -182,10 +185,39 @@ signUpForm.addEventListener("submit", (e) => {
 	}
 });
 
+let instant = document.querySelector(".forinstant");
+let later = document.querySelector(".forlater");
+let time = document.querySelector("#pickup-time");
+let userTime = document.querySelector(".user-time");
+
+later.addEventListener("click", (e) => {
+	if (e.target.checked) {
+		time.style.display = "inline";
+	} else {
+		time.style.display = "none";
+	}
+});
+
+instant.addEventListener("click", (e) => {
+	if (e.target.checked) {
+		time.style.display = "none";
+	} else {
+		time.style.display = "inline";
+	}
+});
+
 userForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	destination.textContent = userDestination.value.split(" ")[0];
 	busFare.textContent = userDestination.value.split(" ")[1];
+	pickUpTime = userForm.time.value;
+
+	console.log(userDestination.value, userForm.commute.value);
+
+	if (pickUpTime !== "") {
+		pickUpText.style.display = "block";
+		userTime.textContent = pickUpTime;
+	}
 
 	driverSelection.style.display = "flex";
 	if (userPysical.checked) {

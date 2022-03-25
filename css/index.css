@@ -490,6 +490,26 @@ header nav ul li a {
 	cursor: pointer;
 }
 
+#request-modal .user-selection form input[type="time"] {
+	padding: 0.5% 1%;
+	font-size: 0.8vw;
+	margin-left: 10%;
+	margin-top: 5%;
+	border-radius: 0.3vw;
+	animation: appear 0.5s;
+	outline: none;
+	display: none;
+}
+
+/* .time-hide {
+	display: none;
+} */
+
+#request-modal .user-selection form span {
+	font-size: 0.8vw;
+	margin-left: 2%;
+}
+
 #request-modal .user-selection .driver-confirmation {
 	width: 80%;
 	margin-top: 5%;
@@ -602,6 +622,10 @@ header nav ul li a {
 #request-modal .ride-summary p {
 	margin-top: 2%;
 	font-size: 1vw;
+}
+
+#request-modal .ride-summary p.user-pickup {
+	display: none;
 }
 
 #request-modal .ride-summary .driver-details h3 {

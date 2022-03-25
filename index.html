@@ -163,7 +163,7 @@
 							</div>
 							<div class="commute">
 								<h3>Type of commute</h3>
-								<label for="instant">
+								<label for="instant" class="forinstant">
 									<input
 										type="radio"
 										name="commute"
@@ -172,9 +172,12 @@
 									/>
 									<span>Instant ride</span>
 								</label>
-								<label for="later">
+								<label for="later" class="forlater">
 									<input type="radio" name="commute" id="later" value="later" />
 									<span>Book for later</span>
+								</label>
+								<label for="pickup-time">
+									<input type="time" name="time" id="pickup-time" />
 								</label>
 							</div>
 						</div>
@@ -247,6 +250,9 @@
 				<div class="ride-summary">
 					<h3>Here is your Ride Summary</h3>
 					<p>Destination: <span class="user-destination"></span></p>
+					<p class="user-pickup">
+						Pickup time: <span class="user-time"></span>
+					</p>
 					<p>Bus Fare: Ksh. <span class="bus-fare"></span></p>
 					<p class="info">This will be charged to your SmartDrive account.</p>
 					<div class="driver-details">
