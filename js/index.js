@@ -208,21 +208,31 @@ instant.addEventListener("click", (e) => {
 
 userForm.addEventListener("submit", (e) => {
 	e.preventDefault();
-	destination.textContent = userDestination.value.split(" ")[0];
-	busFare.textContent = userDestination.value.split(" ")[1];
-	pickUpTime = userForm.time.value;
+	let rideError = document.querySelector(".ride-error-message");
+	if (userDestination !== "route" && userForm.commute.value !== "") {
+		rideError.style.display = "none";
+		destination.textContent = userDestination.value.split(" ")[0];
+		busFare.textContent = userDestination.value.split(" ")[1];
+		pickUpTime = userForm.time.value;
 
-	if (pickUpTime !== "") {
-		pickUpText.style.display = "block";
-		userTime.textContent = pickUpTime;
-	}
+		if (pickUpTime !== "") {
+			pickUpText.style.display = "block";
+			userTime.textContent = pickUpTime;
+		}
 
-	driverSelection.style.display = "flex";
-	if (userPysical.checked) {
-		disabilityDriverSelection.style.display = "flex";
-		normalDriverSelection.style.display = "none";
+		driverSelection.style.display = "flex";
+		if (userPysical.checked) {
+			disabilityDriverSelection.style.display = "flex";
+			normalDriverSelection.style.display = "none";
+		} else {
+			normalDriverSelection.style.display = "flex";
+			disabilityDriverSelection.style.display = "none";
+		}
 	} else {
-		normalDriverSelection.style.display = "flex";
-		disabilityDriverSelection.style.display = "none";
+		userForm.classList.add("shake");
+		setTimeout(() => {
+			userForm.classList.remove("shake");
+		}, 1000);
+		rideError.style.display = "block";
 	}
 });
